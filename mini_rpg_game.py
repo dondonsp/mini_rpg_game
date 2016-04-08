@@ -12,53 +12,6 @@ class Attributes:
 		self.perception = per
 		self.luck = luck
 	
-	'''def get_strength(self):
-		return self.strength
-	
-	def get_resistance(self):
-		return self.resistance
-	
-	def get_dexterity(self):
-		return self.dexterity
-	
-	def get_stamina(self):
-		return self.stamina
-	
-	def get_inteligence(self):
-		return self.inteligence
-	
-	def get_charisma(self):
-		return self.charisma
-	
-	def get_perception(self):
-		return self.perception
-		
-	def get_luck(self):
-		return self.luck
-	
-	def set_strength(self, stre):
-		self.strength = stre
-	
-	def set_resistance(self, res):
-		self.resistance = res
-	
-	def set_dexterity(self, dex):
-		self.dexterity = dex
-	
-	def set_stamina(self, stre):
-		self.stamina = sta
-	
-	def set_inteligence(self, inte):
-		self.inteligence = inte
-	
-	def set_charisma(self, cha):
-		self.charisma = cha
-		
-	def set_perception(self, per):
-		self.perception = per
-	
-	def set_luck(self, luck):
-		self.luck = luck'''
 
 ## Class for char
 class Char:
@@ -81,8 +34,8 @@ class Char:
 	def get_classe(self):
 		return self.classe
 	
-	def get_attributes(self):
-		return self.attributes.inteligence
+	def get_attributes(self, at):
+		return self.attributes.
 
 ## Tests for classes
 attr1 = Attributes(10, 10 ,10, 10, 5, 10, 10 ,10)
@@ -92,5 +45,6 @@ print char1.get_name()
 print char1.get_genre()
 print char1.get_race()
 print char1.get_classe()
-print char1.get_attributes()
+print char1.get_attributes(inteligence)
+print dir(Char)
 	
