@@ -1,7 +1,7 @@
-# -*- coding : latin 1 -*-
+# -*- coding : latin1 -*-
 
 ##Class for attributes
-class Attribute:
+class Attributes:
 	def __init__(self, stre, res, dex, sta, inte, cha, per, luck):
 		self.strength = stre
 		self.resistance = res
@@ -12,7 +12,7 @@ class Attribute:
 		self.perception = per
 		self.luck = luck
 	
-	def get_strength(self):
+	'''def get_strength(self):
 		return self.strength
 	
 	def get_resistance(self):
@@ -58,8 +58,8 @@ class Attribute:
 		self.perception = per
 	
 	def set_luck(self, luck):
-		self.luck = luck
-	
+		self.luck = luck'''
+
 ## Class for char
 class Char:
 	def __init__(self, genre, name, race, classe, attr):
@@ -68,56 +68,29 @@ class Char:
 		self.race = race
 		self.classe = classe
 		self.attributes = attr
-		
-## Function for create a char
-def create_char():
-	##Define inf
-	char = {'genre':'', 'name':'', 'race':'', 'classe':''}
-	char['genre'] = raw_input('Genre of your char: M or F').upper()
-	char['name'] = raw_input('Type name of char: ')
-	## Define race
-	race = ['human', 'elf', 'dwarf', 'undead', 'mecha']
-	print "Define chars´s race"
-	print 'human\n\n'
-	print 'elf\n\n'
-	print 'dwarf\n\n'
-	print 'undead\n\n'
-	print 'mecha\n\n'
-	c_race = raw_input('->')
-	for r in race:
-		if c_race == r:
-			char['race'] = c_race
-		else:
-			print 'Inexistent race!'
-	##Define class
-	classe = ['warrior', 'mage', 'thief', 'archer']
-	print 'Define char´s class'
-	print 'warrior\n\n'
-	print 'mage\n\n'
-	print 'thief\n\n'
-	print 'archer\n\n'
-	c_classe = raw_input('->')
-	for c in classe:
-		if c_classe == c:
-			char['classe'] = c_classe
-		else:
-			print 'Inexistent class!'
-	## Defining attributes
-	points = 0
-	if char['genre'] == 'F':
-		points = 80
-	else:
-		points = 100
 	
-	attr = {'stre': '', 'res' : '', 'dex' : '', 'sta' : '', 'inte': '', 'cha': '', 'per': '', 'luck': ''}
-	print 'You have ' + points + 'points of attribures. Distribute them in the fallowing: '
-	print 'strength\n'
-	print 'dexterity\n'
-	print 'stamina\n'
-	print 'inteligence\n'
-	print 'charisma\n'
-	print 'perception\n'
-	print 'luck\n'
+	def get_genre(self):
+		return self.genre
 	
-	print "classe inexistent"
+	def get_name(self):
+		return self.name
+	
+	def get_race(self):
+		return self.race
+	
+	def get_classe(self):
+		return self.classe
+	
+	def get_attributes(self):
+		return self.attributes.inteligence
+
+## Tests for classes
+attr1 = Attributes(10, 10 ,10, 10, 5, 10, 10 ,10)
+char1 = Char('M', 'Adan', 'human', 'warrior', attr1)
+
+print char1.get_name()
+print char1.get_genre()
+print char1.get_race()
+print char1.get_classe()
+print char1.get_attributes()
 	
