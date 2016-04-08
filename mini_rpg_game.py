@@ -47,4 +47,6 @@ print char1.get_race()
 print char1.get_classe()
 print char1.get_attributes(inteligence)
 print dir(Char)
+
+## Testing git
 	
