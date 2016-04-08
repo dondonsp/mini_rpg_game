@@ -49,4 +49,5 @@ print char1.get_attributes(inteligence)
 print dir(Char)
 
 ## Testing git
+## Testing git again
 	
