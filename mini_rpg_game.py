@@ -52,17 +52,29 @@ class Char:
 
 	def set_health(self, flag, val):
 		if flag == 'pos':
-			self.attributes.health += val
+			if self.attributes.health + val >= self.attributes.max_health:
+				self.attributes.health = self.attributes.max_health
+			else:
+				self.attributes.health += val
 		elif flag == 'neg':
-			self.attributes.health -= val
+			if self.attributes.health - val <= 0:
+				self.attributes.health = 0
+			else:
+				self.attributes.health -= val
 		else:
 			return
 
 	def set_magic(self, flag, val):
 		if flag  == 'pos':
-			self.attributes.magic += val
+			if self.attributes.magic + val >= self.attributes.max_magic:
+				self.attributes.magic = self.attributes.max_magic
+			else:
+				self.attributes.magic += val
 		elif flag == 'neg':
-			self.attributes.magic -= val
+			if self.attributes.magic - val <= 0:
+				self.attributes.magic = 0
+			else:
+			    self.attributes.magic -= val
 		else:
 			return 
 
@@ -100,9 +112,9 @@ def show_char(char):
 
 	print 20 * '#'
 
-char1.set_health('neg', 6)
+char2.set_health('neg', 3)
 char1.set_magic('sss', 4)
-char2.set_magic('neg', 3)
+char2.set_magic('neg', 1)
 char2.set_attributes('luck', 5)
 show_char(char1)
 show_char(char2)
